@@ -56,7 +56,9 @@ Open `GGLBot\src\RLBotMain.cpp`. You will see a section near the top where you m
 
 **Example configuration** (adjust to your training settings):
 
-```cpp
+C++
+
+```
 
 // ------------------------------------------------------------------------
 // Set the following to match the configuration your model was trained with
