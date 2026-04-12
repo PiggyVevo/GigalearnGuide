@@ -26,8 +26,8 @@ Specifically, you need:
 -   `POLICY.lt`
     
 -   `SHARED_HEAD.lt` (if you used a shared head)
-    
--   `CRITIC.lt` (optional, only needed for training, not for inference)
+
+`CRITIC.lt` is not needed to port your bot into **rlbot**, it is only used for training.
     
 
 Example:
@@ -37,7 +37,7 @@ mkdir rlbot
 copy "C:\path\to\your\training\checkpoints\12345678\POLICY.lt" rlbot\
 copy "C:\path\to\your\training\checkpoints\12345678\SHARED_HEAD.lt" rlbot\
 ```
-> **Important**: The file names must be exactly `POLICY.lt` and `SHARED_HEAD.lt` (uppercase). If your shared head model has a different name, rename it.
+> **Important**: The file names must be exactly `POLICY.lt` and `SHARED_HEAD.lt` (uppercase). If your shared head model has a different name(which it shouldn't), rename it.
 
 ----------
 
