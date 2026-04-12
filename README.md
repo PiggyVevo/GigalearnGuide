@@ -338,6 +338,7 @@ cmake .. -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DT
 **Common error:** If CMake cannot find Python, you may need to set `-DPython_EXECUTABLE=...` to your Python executable path (the one inside your virtual environment). Example: `-DPython_EXECUTABLE="C:\Users\YourUsername\RLBot\GigaLearnCPP-Leak\venv\Scripts\python.exe"`
 
 After running, you should see `-- Configuring done` and `-- Generating done`.
+**VERY IMPORTANT: If you ever add a new file to gigalearn, such as a state setter, YOU MUST reconfigure cmake again. If you are jsut making an edit to a file, you just have to rebuild it.**
 
 ### Step 3: Build the executable
 
@@ -457,7 +458,13 @@ The bot will now load the **latest checkpoint** from the `checkpoints` folder an
     
 
 ----------
-
+## Batch Files
+-   You probraly dont wish to start up training again every single time by opening up a new terminal, going to your enviorment, start up training, etc. 
+    
+-   Batch files allow you to just double click and automatically opens up a terminal, autoconfigures/builds, and runs training.
+    
+-   You can make a shortcut on your desktop to easily run it.
+-----------
 ## Understanding Checkpoints and Fresh Runs
 
 -   **Checkpoints** are saved automatically every `cfg.tsPerSave` timesteps (default 1,000,000) and when you press **Q**.
@@ -505,7 +512,7 @@ wandb login
     
 
 **Note:** If you don’t want to use wandb, set `cfg.sendMetrics = false` – the bot will still train normally.
-
+------------
 ### Skill Tracker (ELO rating)
 
 The skill tracker evaluates the bot against older versions of itself and assigns an ELO‑like rating. To enable it:
@@ -621,8 +628,11 @@ The skill rating will appear in the wandb logs.
 -   **Solution:**
         
     -   Increase the weight of the `GoalReward` or `TouchBallReward` temporarily to see if the bot starts moving.
+      
     -   Check the observation size printed at startup (Obs size: X) and the action size amount (Action size. X). It should match the size used during training. If you changed `DefaultObsPadded(3)` but trained with `AdvancedObs`, the bot will have an error.
+      
     -   **If you are switching action parsers or observation builders, you better start a new training run.**
+      
     -   **If you are switching policy or shared head sizes, you also better start a new training run.**
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -647,7 +657,7 @@ The skill rating will appear in the wandb logs.
     
 -   If you encounter an error not listed, check the console output carefully – most errors are self‑explanatory.
     
--   For further help, join the RLBot Discord and ask in the `#gigalearn` or `#cpp` channels.
+-   For further help, join the RLRgym Discord and ask in the `#question` channel.
     
 
 **Happy training!**
