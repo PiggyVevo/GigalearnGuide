@@ -181,13 +181,13 @@ The bot will connect automatically and play using your trained policy.
 ### ❌ `Could not connect to server`
 
 -   The port in `RLBotMain.cpp` must match the port in `rlbot\port.cfg` (default 23234).
-    
--   Make sure no other bot is using the same port.
-    
+  
+-   **YOU MUST LUANCH THE SERVER ALONG WITH THE GUI**
+      
 
 ### ❌ `Error: No valid checkpoint path found`
 
--   The bot cannot find `POLICY.lt`. Place the `.lt` files directly in the `rlbot` folder, or create a `checkpoints` subfolder with the appropriate timestamp subfolder.
+-   The bot cannot find `POLICY.lt` or the `SHARED_HEAD.lt`. Place the `.lt` files directly in the `rlbot` folder, or create a `checkpoints` subfolder with the appropriate timestamp subfolder.
     
 
 ### ❌ `libtorch.dll not found`
@@ -206,7 +206,7 @@ The bot will connect automatically and play using your trained policy.
 
 -   Your layer sizes, activation type, or layer norm settings in `RLBotMain.cpp` do not match the checkpoint. Compare with your `ExampleMain.cpp` and correct.
     
-
+## YOU MUST USE THE SAME ACTION PARSERS/OBSERVATION BUILDERS YOU USED DURING TRAINING, OTHERWISE IT WILL CRASH. 
 ----------
 
 ## Summary
