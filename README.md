@@ -1,4 +1,5 @@
 # GigaLearnCPP Setup Guide 
+#Disclaimer: The files in this repo are from my pc, they might be a little messed up... 😆 Trust your own instincts and follow this guide all the way through instead of just cloning my files, as they might have lots of issues becasue my pc is different from yours.
 
 This guide will walk you through setting up **GigaLearnCPP** – a high‑performance C++ PPO training framework for Rocket League – entirely from the command line. You will build the training executable, run your first training session, and optionally render the bot’s gameplay.
 
@@ -84,8 +85,6 @@ CMake is used to generate the build files.
 6.  Verify CMake is available:
     
 
-DOS
-
 ```
 cmake --version
 
@@ -103,8 +102,6 @@ Git is needed to clone the repository.
     
 3.  Verify:
     
-
-DOS
 
 ```
 git --version
@@ -125,8 +122,6 @@ We will use **Python 3.11** because it is the most stable and tested version for
     
 5.  After installation, open a **new** command prompt and verify:
     
-
-DOS
 
 ```
 python --version
@@ -149,8 +144,6 @@ If you have an **NVIDIA GPU** (Compute Capability 3.5+), you can install CUDA to
     
 4.  Verify CUDA is installed:
     
-
-DOS
 
 ```
 nvcc --version
@@ -176,8 +169,6 @@ RocketSim requires mesh files for the arena collision detection. These are not i
 
 Open a **command prompt** (as normal user, not administrator) and navigate to the directory where you want to keep the code. For example:
 
-DOS
-
 ```
 cd C:\Users\YourUsername\Onedrive\Documents
 mkdir RLBot
@@ -187,16 +178,12 @@ cd RLBot
 
 Now clone the repository **recursively** (this will also download submodules):
 
-DOS
-
 ```
 git clone https://github.com/ZealanL/GigaLearnCPP-Leak.git --recurse-submodules
 
 ```
 
 This may take a minute. After completion, you will have a folder named `GigaLearnCPP-Leak`. Move into that folder:
-
-DOS
 
 ```
 cd GigaLearnCPP-Leak
@@ -211,16 +198,12 @@ Place the `collision_meshes` folder here (copy or move it into `GigaLearnCPP-Lea
 
 To avoid conflicts with other Python projects, we create a virtual environment inside the repository.
 
-DOS
-
 ```
 python -m venv venv
 
 ```
 
 Activate it:
-
-DOS
 
 ```
 venv\Scripts\activate
@@ -236,8 +219,6 @@ Your prompt should now show `(venv)`. All subsequent Python commands will use th
 ## Installing Required Python Packages
 
 With the virtual environment active, install the needed packages:
-
-DOS
 
 ```
 pip install wandb numpy matplotlib
@@ -271,7 +252,7 @@ LibTorch is PyTorch’s C++ library. You must download the **CPU** or **CUDA** v
         
     -   Language: C++
         
-    -   Compute Platform: CPU(if you have nvidia gpu, choose cuda)
+    -   Compute Platform: CPU
         
 3.  Download the **CPU** version (e.g., `libtorch-win-shared-with-deps-2.5.1+cpu.zip`).
     
@@ -305,8 +286,6 @@ Now we use CMake to generate the Visual Studio solution and build the executable
 
 Inside the repository root (`GigaLearnCPP-Leak`), create a new folder for the build output:
 
-DOS
-
 ```
 mkdir build
 cd build
@@ -316,8 +295,6 @@ cd build
 ### Step 2: Configure CMake
 
 Run the following command **in one line** (replace the libtorch path if you placed it elsewhere). This example is for **CPU**; for CUDA, you can omit the `-DTorch_DIR` override (CMake will find CUDA automatically).
-
-DOS
 
 ```
 cmake .. -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DTorch_DIR="C:/Users/YourUsername/RLBot/GigaLearnCPP-Leak/GigaLearnCPP/libtorch/share/cmake/Torch"
@@ -342,8 +319,6 @@ After running, you should see `-- Configuring done` and `-- Generating done`.
 
 ### Step 3: Build the executable
 
-DOS
-
 ```
 cmake --build . --config Release --target GigaLearnBot
 
@@ -361,16 +336,12 @@ Before starting training, ensure you have a `checkpoints` folder where the bot w
 
 Navigate to the output folder:
 
-DOS
-
 ```
 cd RelWithDebInfo
 
 ```
 
 Now run the training executable:
-
-DOS
 
 ```
 GigaLearnBot.exe
@@ -415,8 +386,6 @@ GigaLearnCPP includes a renderer that visualises the bot’s gameplay using **Ro
 
 Clone the RocketSimVis repository from:
 
-DOS
-
 ```
 git clone https://github.com/ZealanL/RocketSimVis.git
 
@@ -428,8 +397,6 @@ This folder can be placed **anywhere on your system** (e.g., `C:\RLBot\RocketSim
 
 Open a **separate** command prompt. Navigate to the RocketSimVis folder and double click on the **run.bat** file.
 
-DOS
-
 ```
 run.bat
 
@@ -440,8 +407,6 @@ You will see a window opening. Keep it running.
 ### Run the Bot in Render Mode
 
 Back in your `build\ReRelWithDebInfo` folder, run:
-
-DOS
 
 ```
 GigaLearnBot.exe --render
@@ -497,9 +462,7 @@ GigaLearnCPP can log training metrics to **Weights & Biases** (wandb) for easy v
 ### Enabling wandb metrics
 
 1.  Create a free account at `wandb.ai` and log in from your terminal:
-    
-
-DOS
+   
 
 ```
 wandb login
