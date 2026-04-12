@@ -10,43 +10,25 @@ This guide will walk you through setting up **GigaLearnCPP** – a high‑perfor
 
 ## Table of Contents
 
-1.  [Prerequisites](https://www.google.com/search?q=%23prerequisites)
-    
-2.  [Installation Steps](https://www.google.com/search?q=%23installation-steps)
-    
-    -   [2.1 Install Visual Studio Build Tools](https://www.google.com/search?q=%2321-install-visual-studio-build-tools)
-        
-    -   [2.2 Install CMake](https://www.google.com/search?q=%2322-install-cmake)
-        
-    -   [2.3 Install Git](https://www.google.com/search?q=%2323-install-git)
-        
-    -   [2.4 Install Python 3.11](https://www.google.com/search?q=%2324-install-python-311)
-        
-    -   [2.5 (Optional) Install CUDA for GPU training](https://www.google.com/search?q=%2325-optional-install-cuda-for-gpu-training)
-        
-    -   [2.6 Download RocketSim Collision Meshes](https://www.google.com/search?q=%2326-download-rocketsim-collision-meshes)
-        
-3.  [Cloning the Repository](https://www.google.com/search?q=%23cloning-the-repository)
-    
-4.  [Setting Up Python Virtual Environment](https://www.google.com/search?q=%23setting-up-python-virtual-environment)
-    
-5.  [Installing Required Python Packages](https://www.google.com/search?q=%23installing-required-python-packages)
-    
-6.  [Downloading and Placing LibTorch](https://www.google.com/search?q=%23downloading-and-placing-libtorch)
-    
-7.  [Building GigaLearnCPP](https://www.google.com/search?q=%23building-gigalearncpp)
-    
-8.  [Running Training](https://www.google.com/search?q=%23running-training)
-    
-9.  [Rendering the Bot](https://www.google.com/search?q=%23rendering-the-bot)
-    
-10.  [Understanding Checkpoints and Fresh Runs](https://www.google.com/search?q=%23understanding-checkpoints-and-fresh-runs)
-    
-11.  [Metrics and Skill Tracker](https://www.google.com/search?q=%23metrics-and-skill-tracker)
-    
-12.  [Common Errors and Troubleshooting](https://www.google.com/search?q=%23common-errors-and-troubleshooting)
-    
-13.  [Final Notes and Resources](https://www.google.com/search?q=%23final-notes-and-resources)
+1. [Prerequisites](#prerequisites)
+2. [Installation Steps](#installation-steps)
+    * [2.1 Install Visual Studio Build Tools](#21-install-visual-studio-build-tools)
+    * [2.2 Install CMake](#22-install-cmake)
+    * [2.3 Install Git](#23-install-git)
+    * [2.4 Install Python 3.11](#24-install-python-311)
+    * [2.5 (Optional) Install CUDA for GPU training](#25-optional-install-cuda-for-gpu-training)
+    * [2.6 Download RocketSim Collision Meshes](#26-download-rocketsim-collision-meshes)
+3. [Cloning the Repository](#cloning-the-repository)
+4. [Setting Up Python Virtual Environment](#setting-up-python-virtual-environment)
+5. [Installing Required Python Packages](#installing-required-python-packages)
+6. [Downloading and Placing LibTorch](#downloading-and-placing-libtorch)
+7. [Building GigaLearnCPP](#building-gigalearncpp)
+8. [Running Training](#running-training)
+9. [Rendering the Bot](#rendering-the-bot)
+10. [Understanding Checkpoints and Fresh Runs](#understanding-checkpoints-and-fresh-runs)
+11. [Metrics and Skill Tracker](#metrics-and-skill-tracker)
+12. [Common Errors and Troubleshooting](#common-errors-and-troubleshooting)
+13. [Final Notes and Resources](#final-notes-and-resources)
     
 
 ----------
