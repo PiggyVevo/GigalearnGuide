@@ -1,5 +1,5 @@
 # GigaLearnCPP Setup Guide 
-#Disclaimer: The files in this repo are from my pc, they might be a little messed up... 😆 Trust your own instincts and follow this guide all the way through instead of just cloning my files, as they might have lots of issues becasue my pc is different from yours.
+# Disclaimer: The files in this repo are from my pc, they might be a little messed up... 😆 Trust your own instincts and follow this guide all the way through instead of just cloning my files, as they might have lots of issues becasue my pc is different from yours.
 
 This guide will walk you through setting up **GigaLearnCPP** – a high‑performance C++ PPO training framework for Rocket League – entirely from the command line. You will build the training executable, run your first training session, and optionally render the bot’s gameplay.
 
