@@ -2,7 +2,7 @@
 
 This guide will walk you through setting up **GigaLearnCPP** – a high‑performance C++ PPO training framework for Rocket League – entirely from the command line. You will build the training executable, run your first training session, and optionally render the bot’s gameplay.
 
-**Who this guide is targeted towards:** Users with a clean Windows machine, comfortable with the command prompt. No prior C++ or Python experience is required, but basic familiarity with terminals is helpful.
+**Who this guide is targeted towards:** Users with a clean Windows machine, comfortable with the command prompt. No prior C++ or Python experience is required, but basic familiarity with them is VERY helpful.
 
 **Important:** This guide is written for **Python 3.11** and the **CPU version of libtorch**. If you have an NVIDIA GPU, you can follow the CUDA version notes.
 
