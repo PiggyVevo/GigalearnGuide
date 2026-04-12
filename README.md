@@ -579,26 +579,25 @@ The skill rating will appear in the wandb logs.
 -   **Cause:** You attempted to index `arena->_cars` as an array, but it is an unordered set.
     
 -   **Solution:** Use iterators to loop through cars, as shown in the provided state setters.
-    
+  
+**6. Bot runs but does nothing (always low rewards)**
 
-**6. Bot runs but does nothing (always zero rewards)**
-
--   **Cause:** Observation size mismatch or reward weights too low.
+-   **Cause:** Reward weights too low.
     
 -   **Solution:**
-    
-    -   Check the observation size printed at startup (Obs size: X). It should match the size used during training. If you changed `DefaultObsPadded(3)` but trained with `AdvancedObs`, the bot will have an error..
         
-    -   Increase the weight of the `GoalReward` or `TouchBallReward` temporarily to see if the bot starts moving.
+    -   Increase the weight of the `TouchBallReward`  temporarily to see if the bot starts moving. *You need to start up training with a few rewards, not just goal reward
         
 
-**7. Training is extremely slow (under 10k steps/sec)**
+**7. Training is extremely slow (under 30k steps/sec)**
 
 -   **Cause:** Too many parallel games (cfg.numGames) for your CPU.
     
 -   **Solution:**
     
     -   Reduce `cfg.numGames` to 128 or 64. Monitor CPU usage in Task Manager.
+      
+    -   Don't use massive policy sizes. A shared head of [512, 512, 512] and a policy/critic size of [256, 256, 256] is good enough.
         
     -   Disable the skill tracker (cfg.skillTracker.enabled = false) as it uses extra CPU.
         
@@ -611,12 +610,21 @@ The skill rating will appear in the wandb logs.
     
 -   **Solution:**
     
-    -   Start `run.bat` in the RocketSimVis folder first.
+    -   Start `run.bat` in the RocketSimVis folder first(make sure the run.bat is not placed somewhere else randomly apart from the RocketSimVis folder).
         
-    -   Check that the port in `RenderSender.cpp` (default 1234) matches the port used by RocketSimVis (usually 1234). No change needed.
+    -   Check that the port in `RenderSender.cpp` (default 9237) matches the port used by RocketSimVis (9237). No change needed.
         
+**9. Errors when starting up training**
 
-----------
+-   **Cause:** Using different obs/acts and different policy sizes
+    
+-   **Solution:**
+        
+    -   Increase the weight of the `GoalReward` or `TouchBallReward` temporarily to see if the bot starts moving.
+    -   Check the observation size printed at startup (Obs size: X) and the action size amount (Action size. X). It should match the size used during training. If you changed `DefaultObsPadded(3)` but trained with `AdvancedObs`, the bot will have an error.
+    -   **If you are switching action parsers or observation builders, you better start a new training run.**
+    -   **If you are switching policy or shared head sizes, you also better start a new training run.**
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Final Notes and Resources
 
