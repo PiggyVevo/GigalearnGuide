@@ -586,7 +586,7 @@ The skill rating will appear in the wandb logs.
 
 -   **GigaLearnCPP Introduction Video** [Introduction On Gigalearn](https://www.youtube.com/watch?v=QprErElWT-E)
     
--   **RLBot Discord Server:** [https://discord.gg/E6CDtwgP8F](https://discord.gg/E6CDtwgP8F)
+-   **RLGym Discord Server:** [Rlgym Invite Link](https://discord.gg/E6CDtwgP8F)
     
 -   **YouTube Tutorial (RLGym v2):** [Rlgym v2 python tutorial](https://www.youtube.com/watch?v=_IbWTCQNsxE)
     
