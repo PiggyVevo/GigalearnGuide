@@ -442,7 +442,7 @@ GigaLearnCPP can log training metrics to **Weights & Biases** (wandb) for easy v
 
 ### Enabling wandb metrics
 
-1.  Create a free account at `wandb.ai` and log in from your terminal:   
+1.  Create a free account on [Wandb](https://wandb.ai/site/) and log in from your terminal:   
 
 ```
 wandb login
