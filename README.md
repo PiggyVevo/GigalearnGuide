@@ -513,9 +513,9 @@ The skill rating will appear in the wandb logs.
     
 -   **Solution:**
     
-    -   Copy the `collision_meshes` folder into the same directory as `GigaLearnBot.exe` (i.e., `build\Release`).
+    -   Copy the `collision_meshes` folder into the same directory as `GigaLearnBot.exe` (i.e., `build\RelWithDebInfo`).
         
-    -   Or, place it in the repository root and the build step will copy it (but the `ExampleMain.cpp` uses `RocketSim::Init("collision_meshes")`, which is relative to the working directory).
+    -   Or, place it in the repository root and the build step will copy it (the `ExampleMain.cpp` uses `RocketSim::Init("collision_meshes")`, which is relative to the working directory).
         
 
 **5. error C2676: binary '[': 'std::unordered_set<...>' does not define this operator**
@@ -541,11 +541,11 @@ The skill rating will appear in the wandb logs.
     
     -   Reduce `cfg.numGames` to 128 or 64. Monitor CPU usage in Task Manager.
       
-    -   Don't use massive policy sizes. A shared head of [512, 512, 512] and a policy/critic size of [256, 256, 256] is good enough.
+    -   Don't use massive policy sizes. A shared head of `[512, 512, 512]`and a policy/critic size of `[256, 256, 256]` is good enough.
         
-    -   Disable the skill tracker (cfg.skillTracker.enabled = false) as it uses extra CPU.
+    -   Disable the skill tracker (cfg.skillTracker.enabled = false) as it uses extra CPU(this doesn't matter too much).
         
-    -   Use GPU if available.
+    -   Use GPU(Cuda) if available.
         
 
 **8. Could not connect to server when rendering**
@@ -596,11 +596,11 @@ The skill rating will appear in the wandb logs.
     
 -   **If you encounter an error not listed, check the console output carefully – most errors are self‑explanatory.**
   
-- **LEARn TO FRICKIN READ THE CONSOLE OUTPUT LOGS, 60%+ OF ERRORS ARE SELF EXPLANATORY**
+- **LEARN TO FRICKIN READ THE CONSOLE OUTPUT LOGS, 70%+ OF ERRORS ARE SELF EXPLANATORY**
     
 -   For further help, join the RLRgym Discord and ask in the `#question` channel.
     
 
 **Happy training!**
 
-## SUBSCRIBE TO MY YOUTUBE CHANNEL: https://www.youtube.com/@RrichardsWorld?sub_confirmation=1 
+# SUBSCRIBE TO MY YOUTUBE CHANNEL: https://www.youtube.com/@RrichardsWorld?sub_confirmation=1 
