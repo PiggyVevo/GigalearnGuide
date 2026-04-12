@@ -1,7 +1,10 @@
 # GigaLearnCPP Setup Guide 
-**Disclaimer: Trust your own instincts and follow this guide all the way through, watch my tutorials for help!**
 
-**If you do not understand how gigalearn works, it is VERY IMPORTANT to watch this tutorial to get an idea of how gigalearn works and some basic machine learning concepts. I can give you all the guides in the universe, but if your monkey brain does not understand a single thing, bot making will be very hard: [Introduction On Gigalearn](https://www.youtube.com/watch?v=QprErElWT-E)**
+#FOLLOW THIS GUIDE ALL THE WAY THROUGH! If you skip a step, and you ask me for help, I'm going to be very mad at you.
+
+##IMPORTANT
+**If you do not understand how gigalearn works, it is VERY IMPORTANT to watch this tutorial to get an idea of how gigalearn works and some basic machine learning concepts. I can give you all the guides in the universe, but if your monkey brain does not understand a single thing, bot making will be very hard: 
+[Introduction On Gigalearn](https://www.youtube.com/watch?v=QprErElWT-E)**
 
 This guide will walk you through setting up **GigaLearnCPP** – a high‑performance C++ PPO training framework for Rocket League – entirely from the command line. You will build the training executable, run your first training session, and optionally render the bot’s gameplay.
 
@@ -577,17 +580,19 @@ The skill rating will appear in the wandb logs.
 
 ## Final Notes and Resources
 
--   **GigaLearnCPP Public Archive:** [https://github.com/ZealanL/GigaLearnCPP-Leak](https://github.com/ZealanL/GigaLearnCPP-Leak)
+-   **GigaLearnCPP Public Archive:** [Official Github Repo](https://github.com/ZealanL/GigaLearnCPP-Leak)
+
+-   **GigaLearnCPP Introduction Video** [Introduction On Gigalearn](https://www.youtube.com/watch?v=QprErElWT-E)
     
 -   **RLBot Discord Server:** [https://discord.gg/E6CDtwgP8F](https://discord.gg/E6CDtwgP8F)
     
--   **YouTube Tutorial (RLGym v2):** [https://www.youtube.com/watch?v=_IbWTCQNsxE](https://www.youtube.com/watch?v=_IbWTCQNsxE)
+-   **YouTube Tutorial (RLGym v2):** [Rlgym v2 python tutorial](https://www.youtube.com/watch?v=_IbWTCQNsxE)
     
--   **Example RLGym v2 Bot (Python):** [https://github.com/PiggyVevo/ExampleRocketLeagueBot](https://github.com/PiggyVevo/ExampleRocketLeagueBot)
+-   **Example RLGym v2 Bot (Python):** [Rlgym v2 python bot example](https://github.com/PiggyVevo/ExampleRocketLeagueBot)
     
--   **My YouTube Channel:** [https://www.youtube.com/@RrichardsWorld](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
+-   **My YouTube Channel:** [MY YOUTUBE CHANNEL](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
 
--   **DM me on discord for help: richardsworld**
+-   **DM me on discord for help:** `richardsworld`
     
 
 ### Final Advice
@@ -598,9 +603,9 @@ The skill rating will appear in the wandb logs.
     
 -   **If you encounter an error not listed, check the console output carefully – most errors are self‑explanatory.**
   
-- **LEARN TO FRICKIN READ THE CONSOLE OUTPUT LOGS, 70%+ OF ERRORS ARE SELF EXPLANATORY**
+-   **LEARN TO FRICKIN READ THE CONSOLE OUTPUT LOGS, 70%+ OF ERRORS ARE SELF EXPLANATORY**
     
--   For further help, join the RLRgym Discord and ask in the `#question` channel.
+-   For further help, join the RLGym Discord and ask for help in the `#question` channel.
     
 
 **Happy training!**
