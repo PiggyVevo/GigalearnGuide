@@ -1,6 +1,6 @@
 # GigaLearnCPP Setup Guide 
 
-# FOLLOW THIS GUIDE ALL THE WAY THROUGH! If you skip a step, and you ask me for help, I'm going to be very mad at you.
+# FOLLOW THIS GUIDE ALL THE WAY THROUGH! If you skipped a step/didn't read an instruction, and you decide to ask me for help, I'm going to be very mad at you.
 
 ## IMPORTANT
 **If you do not understand how gigalearn works, it is VERY IMPORTANT to watch this tutorial to get an idea of how gigalearn works and some basic machine learning concepts. I can give you all the guides in the universe, but if your monkey brain does not understand a single thing, bot making will be very hard: 
@@ -61,11 +61,11 @@ Before starting, ensure your system meets the following requirements:
 
 GigaLearnCPP requires a modern C++ compiler. The easiest way is to install the **Build Tools for Visual Studio 2026**.
 
-1.  Download the installer from: [https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2026)
+1.  Download the installer from: [Visual Studio Build Tools](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2026)
     
 2.  Run the installer and select **Desktop development with C++**.
     
-3.  This will install MSVC v143 compiler, CMake (optional, but we’ll install CMake separately), and the Windows SDK.
+3.  This will install MSVC compiler, CMake (optional, but we’ll install CMake separately), and the Windows SDK.
     
 4.  Complete the installation and **restart your computer**.
     
@@ -98,7 +98,7 @@ You should see something like `cmake version 3.28.x`.
 
 Git is needed to clone the repository.
 
-1.  Download from: [https://git-scm.com/download/win](https://git-scm.com/download/win)
+1.  Download from: [Git For Windows](https://git-scm.com/download/win)
     
 2.  Use the default settings during installation (add to PATH is automatically selected).
     
@@ -112,7 +112,7 @@ git --version
 
 We will use **Python 3.11** because it is the most stable and tested version for GigaLearnCPP.
 
-1.  Download the Python 3.11 installer from: [https://www.python.org/downloads/release/python-3110/](https://www.python.org/downloads/release/python-3110/)
+1.  Download the Python 3.11 installer from: [Python 3.11 Installer Page](https://www.python.org/downloads/release/python-3110/)
     
 2.  (Choose the **Windows installer (64-bit)**)
     
@@ -134,7 +134,7 @@ Output should be `Python 3.11.x`.
 
 If you have an **NVIDIA GPU** (Compute Capability 3.5+), you can install CUDA to train much faster. Skip this section if you only have a CPU.
 
-1.  Download CUDA 12.8 from: [https://developer.nvidia.com/cuda-12-8-0-download-archive](https://developer.nvidia.com/cuda-12-8-0-download-archive)
+1.  Download CUDA 12.8 from: [Cuda Download](https://developer.nvidia.com/cuda-12-8-0-download-archive)
     
 2.  Choose **Windows → x86_64 → exe (local)**.
     
@@ -150,7 +150,7 @@ nvcc --version
 
 RocketSim requires mesh files for the arena collision detection. These are not included in the repository.
 
-1.  Go to the **RLArenaCollisionDumper** repository: [https://github.com/ZealanL/RLArenaCollisionDumper](https://github.com/ZealanL/RLArenaCollisionDumper)
+1.  Go to the **RLArenaCollisionDumper** repository: [CollisionMeshDumper Github](https://github.com/ZealanL/RLArenaCollisionDumper)
     
 2.  Follow the instructions there to **download** the `collision_meshes` folder.
     
@@ -230,7 +230,7 @@ LibTorch is PyTorch’s C++ library. You must download the **CPU** or **CUDA** v
 
 ### For CPU (no GPU)
 
-1.  Go to [https://pytorch.org/get-started/locally/](https://pytorch.org/get-started/locally/)
+1.  Go to the [Pytorch Homepage](https://pytorch.org/get-started/locally/)
     
 2.  Select:
     
@@ -592,7 +592,7 @@ The skill rating will appear in the wandb logs.
     
 -   **Example RLGym v2 Bot (Python):** [Rlgym v2 python bot example](https://github.com/PiggyVevo/ExampleRocketLeagueBot)
     
--   **My YouTube Channel:** [MY YOUTUBE CHANNEL](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
+-   **My YouTube Channel:** [My Youtybe Channel](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
 
 -   **DM me on discord for help:** `richardsworld`
     
@@ -610,6 +610,6 @@ The skill rating will appear in the wandb logs.
 -   For further help, join the RLGym Discord and ask for help in the `#question` channel.
     
 
-**Happy training!**
+**Happy training! :D**
 
-# SUBSCRIBE TO MY YOUTUBE CHANNEL: https://www.youtube.com/@RrichardsWorld?sub_confirmation=1 
+# SUBSCRIBE TO MY YOUTUBE CHANNEL FOR MORE TUTORIALS: [Subscribe](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
