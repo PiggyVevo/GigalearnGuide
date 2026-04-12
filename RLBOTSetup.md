@@ -91,10 +91,9 @@ bool useGPU = false;
 
 By default, the bot loads the latest checkpoint from the `rlbot\checkpoints` folder. If you want to force a specific model, uncomment the `checkpointPath` line and set the full path to your `POLICY.lt` file.
 
-cpp
-
+```cpp
 // checkpointPath = "C:/GGLBot/rlbot/POLICY.lt";
-
+```
 Use forward slashes (`/`) or double backslashes (`\\`).
 
 ----------
@@ -107,7 +106,7 @@ Inside the `GGLBot` folder, create a build directory and configure CMake. The pr
 
 Copy your libtorch folder (the same one you used for training) to:
 
-```text
+```cmd
 %LOCALAPPDATA%\RLBot5\bots\libtorch_cpu
 ```
 For example:
