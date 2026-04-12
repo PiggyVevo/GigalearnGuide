@@ -54,9 +54,9 @@ Before starting, ensure your system meets the following requirements:
 
 ### 2.1 Install Visual Studio Build Tools
 
-GigaLearnCPP requires a modern C++ compiler. The easiest way is to install the **Build Tools for Visual Studio 2022**.
+GigaLearnCPP requires a modern C++ compiler. The easiest way is to install the **Build Tools for Visual Studio 2026**.
 
-1.  Download the installer from: [https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022)
+1.  Download the installer from: [https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2022](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2026)
     
 2.  Run the installer and select **Desktop development with C++**.
     
