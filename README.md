@@ -582,6 +582,8 @@ The skill rating will appear in the wandb logs.
 
 -   **GigaLearnCPP Public Archive:** [Official Github Repo](https://github.com/ZealanL/GigaLearnCPP-Leak)
 
+-   **Gamma Calculator:** [GammaDesmos](https://www.desmos.com/calculator/oxplhwmy89)
+
 -   **GigaLearnCPP Introduction Video** [Introduction On Gigalearn](https://www.youtube.com/watch?v=QprErElWT-E)
     
 -   **RLBot Discord Server:** [https://discord.gg/E6CDtwgP8F](https://discord.gg/E6CDtwgP8F)
