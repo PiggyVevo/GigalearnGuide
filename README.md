@@ -46,8 +46,7 @@ Before starting, ensure your system meets the following requirements:
     
 -   **At least 8 GB RAM** (16 GB recommended for training)
     
--   **10 GB free disk space** (for the repository, libtorch, and checkpoints)
-    
+-   **10 GB free disk space** (for the repository, libtorch, and checkpoints)    
 
 ----------
 
@@ -84,10 +83,8 @@ CMake is used to generate the build files.
     
 6.  Verify CMake is available:
     
-
 ```
 cmake --version
-
 ```
 
 You should see something like `cmake version 3.28.x`.
@@ -102,10 +99,8 @@ Git is needed to clone the repository.
     
 3.  Verify:
     
-
 ```
 git --version
-
 ```
 
 ### 2.4 Install Python 3.11
@@ -122,10 +117,8 @@ We will use **Python 3.11** because it is the most stable and tested version for
     
 5.  After installation, open a **new** command prompt and verify:
     
-
 ```
 python --version
-
 ```
 
 Output should be `Python 3.11.x`.
@@ -142,12 +135,10 @@ If you have an **NVIDIA GPU** (Compute Capability 3.5+), you can install CUDA to
     
 3.  Run the installer and use the default settings. **Restart** your PC after installation.
     
-4.  Verify CUDA is installed:
-    
+4.  Verify CUDA is installed:  
 
 ```
 nvcc --version
-
 ```
 
 ### 2.6 Download RocketSim Collision Meshes
@@ -173,21 +164,18 @@ Open a **command prompt** (as normal user, not administrator) and navigate to th
 cd C:\Users\YourUsername\Onedrive\Documents
 mkdir RLBot
 cd RLBot
-
 ```
 
 Now clone the repository **recursively** (this will also download submodules):
 
 ```
 git clone https://github.com/ZealanL/GigaLearnCPP-Leak.git --recurse-submodules
-
 ```
 
 This may take a minute. After completion, you will have a folder named `GigaLearnCPP-Leak`. Move into that folder:
 
 ```
 cd GigaLearnCPP-Leak
-
 ```
 
 Place the `collision_meshes` folder here (copy or move it into `GigaLearnCPP-Leak`). The final path should be `GigaLearnCPP-Leak\collision_meshes`.
@@ -200,14 +188,12 @@ To avoid conflicts with other Python projects, we create a virtual environment i
 
 ```
 python -m venv venv
-
 ```
 
 Activate it:
 
 ```
 venv\Scripts\activate
-
 ```
 
 Your prompt should now show `(venv)`. All subsequent Python commands will use this isolated environment.
@@ -222,7 +208,6 @@ With the virtual environment active, install the needed packages:
 
 ```
 pip install wandb numpy matplotlib
-
 ```
 
 -   **wandb** – for logging metrics (optional but recommended).
@@ -265,7 +250,6 @@ Plaintext
 
 ```
 GigaLearnCPP-Leak\GigaLearnCPP\libtorch
-
 ```
 
 The final path should be `GigaLearnCPP-Leak\GigaLearnCPP\libtorch` with `bin`, `lib`, `include`, etc. inside.
@@ -289,7 +273,6 @@ Inside the repository root (`GigaLearnCPP-Leak`), create a new folder for the bu
 ```
 mkdir build
 cd build
-
 ```
 
 ### Step 2: Configure CMake
@@ -298,7 +281,6 @@ Run the following command **in one line** (replace the libtorch path if you plac
 
 ```
 cmake .. -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DTorch_DIR="C:/Users/YourUsername/RLBot/GigaLearnCPP-Leak/GigaLearnCPP/libtorch/share/cmake/Torch"
-
 ```
 
 **Explanation:**
@@ -321,7 +303,6 @@ After running, you should see `-- Configuring done` and `-- Generating done`.
 
 ```
 cmake --build . --config Release --target GigaLearnBot
-
 ```
 
 This will compile all sources and produce `GigaLearnBot.exe` inside `build\Release\`. The build time can be 5–15 minutes depending on your CPU.
@@ -338,14 +319,12 @@ Navigate to the output folder:
 
 ```
 cd RelWithDebInfo
-
 ```
 
 Now run the training executable:
 
 ```
 GigaLearnBot.exe
-
 ```
 
 You will see console output showing the training progress, including:
@@ -388,7 +367,6 @@ Clone the RocketSimVis repository from:
 
 ```
 git clone https://github.com/ZealanL/RocketSimVis.git
-
 ```
 
 This folder can be placed **anywhere on your system** (e.g., `C:\RLBot\RocketSimVis`). It contains a `run.bat` script that launches the visualiser.
@@ -399,7 +377,6 @@ Open a **separate** command prompt. Navigate to the RocketSimVis folder and doub
 
 ```
 run.bat
-
 ```
 
 You will see a window opening. Keep it running.
@@ -410,7 +387,6 @@ Back in your `build\ReRelWithDebInfo` folder, run:
 
 ```
 GigaLearnBot.exe --render
-
 ```
 
 The bot will now load the **latest checkpoint** from the `checkpoints` folder and start a single game, sending frames to RocketSimVis. You can watch the bot play.
@@ -461,12 +437,10 @@ GigaLearnCPP can log training metrics to **Weights & Biases** (wandb) for easy v
 
 ### Enabling wandb metrics
 
-1.  Create a free account at `wandb.ai` and log in from your terminal:
-   
+1.  Create a free account at `wandb.ai` and log in from your terminal:   
 
 ```
 wandb login
-
 ```
 
 2.  In `ExampleMain.cpp`, set `cfg.sendMetrics = true;` and optionally change `cfg.metricsProjectName`, `cfg.metricsGroupName`, `cfg.metricsRunName`.
