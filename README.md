@@ -459,7 +459,7 @@ The bot will now load the **latest checkpoint** from the `checkpoints` folder an
 
 ----------
 ## Batch Files
--   You probraly dont wish to start up training again every single time by opening up a new terminal, going to your enviorment, start up training, etc. 
+-   You probably dont wish to start up training again every single time by opening up a new terminal, going to your enviorment, start up training, etc. 
     
 -   Batch files allow you to just double click and automatically opens up a terminal, autoconfigures/builds, and runs training.
     
@@ -593,7 +593,7 @@ The skill rating will appear in the wandb logs.
     
 -   **Solution:**
         
-    -   Increase the weight of the `TouchBallReward`  temporarily to see if the bot starts moving. *You need to start up training with a few rewards, not just goal reward
+    -   Increase the weight of the `TouchBallReward` or `VelocityPlayerToBallReward`  to see if the bot starts moving. **You need to start up training with a few rewards, not just goal reward.**
         
 
 **7. Training is extremely slow (under 30k steps/sec)**
@@ -620,8 +620,8 @@ The skill rating will appear in the wandb logs.
     -   Start `run.bat` in the RocketSimVis folder first(make sure the run.bat is not placed somewhere else randomly apart from the RocketSimVis folder).
         
     -   Check that the port in `RenderSender.cpp` (default 9237) matches the port used by RocketSimVis (9237). No change needed.
-        
-**9. Errors when starting up training**
+--------------
+**COMMON ERRORS**
 
 -   **Cause:** Using different obs/acts and different policy sizes
     
@@ -646,7 +646,9 @@ The skill rating will appear in the wandb logs.
     
 -   **Example RLGym v2 Bot (Python):** [https://github.com/PiggyVevo/ExampleRocketLeagueBot](https://github.com/PiggyVevo/ExampleRocketLeagueBot)
     
--   **My YouTube Channel:** [https://www.youtube.com/@RrichardsWorld](https://www.youtube.com/@RrichardsWorld)
+-   **My YouTube Channel:** [https://www.youtube.com/@RrichardsWorld](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
+
+-   **DM me on discord for help: richardsworld**
     
 
 ### Final Advice
@@ -655,9 +657,13 @@ The skill rating will appear in the wandb logs.
     
 -   Use the **virtual environment** every time you run training or rendering to keep dependencies isolated.
     
--   If you encounter an error not listed, check the console output carefully – most errors are self‑explanatory.
+-   **If you encounter an error not listed, check the console output carefully – most errors are self‑explanatory.**
+  
+- **LEARn TO FRICKIN READ THE CONSOLE OUTPUT LOGS, 60%+ OF ERRORS ARE SELF EXPLANATORY**
     
 -   For further help, join the RLRgym Discord and ask in the `#question` channel.
     
 
 **Happy training!**
+
+## SUBSCRIBE TO MY YOUTUBE CHANNEL: https://www.youtube.com/@RrichardsWorld?sub_confirmation=1 
