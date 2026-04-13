@@ -1,3 +1,7 @@
+/* IMPORTANT!!!!!!!!!!!!!!!!!!!
+Just replace this with your original examplemain.cpp file in your GigalearnCPP-Leak/src file
+	*/
+
 #include <GigaLearnCPP/Learner.h>
 
 #include <RLGymCPP/Rewards/CommonRewards.h>
