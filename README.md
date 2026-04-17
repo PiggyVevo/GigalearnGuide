@@ -205,7 +205,7 @@ Activate it:
 gigalearn_env\Scripts\activate
 ```
 
-Your prompt should now show `(venv)`. All subsequent Python commands will use this isolated environment.
+Your prompt should now show `(gigalearn_env)`. All subsequent Python commands will use this isolated environment.
 
 **Tip:** To deactivate later, just type `deactivate`.
 
@@ -590,7 +590,7 @@ The skill rating will appear in the wandb logs.
 
 -   **GigaLearnCPP Introduction Video** [Introduction On Gigalearn](https://www.youtube.com/watch?v=QprErElWT-E)
     
--   **RLGym Discord Server:** [Rlgym Invite Link](https://discord.gg/E6CDtwgP8F)
+-   **RLGym Discord Server:** [RlGym Discord Server Invite Link](https://discord.gg/E6CDtwgP8F)
     
 -   **YouTube Tutorial (RLGym v2):** [Rlgym v2 python tutorial](https://www.youtube.com/watch?v=_IbWTCQNsxE)
     
@@ -611,7 +611,7 @@ The skill rating will appear in the wandb logs.
   
 -   **If you encounter an error not listed, check the console output carefully. LEARN TO FRICKIN READ THE CONSOLE OUTPUT LOGS, 70%+ OF ERRORS ARE SELF EXPLANATORY**
     
--   For further help, join the RLGym Discord and ask for help in the `#question` channel.
+-   For further help, join the [RlGym Discord](https://discord.gg/E6CDtwgP8F) and ask for help in the `#question` channel. (do not spam the `general` channel for help.)
     
 
 **Happy training! :D**
