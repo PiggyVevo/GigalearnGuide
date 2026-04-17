@@ -130,7 +130,9 @@ Output should be `Python 3.11.x`.
 
 **Note:** If you have multiple Python versions, ensure `python` points to 3.11. You can also use `py -3.11` but we assume `python` works.
 
-** If you ***already have python*** installed, check your **system enviormrent variables** by typing `Edit the system enviroment variables` and clicking on `Enviroment Settings` and then double clicking on **path** (for the **user** that you are in) and make sure that `python 3.11` is in there. It should look something like this: `C:\Users\UserName\AppData\Local\Programs\Python\Python311\Scripts\` & `C:\Users\yiric\AppData\Local\Programs\Python\Python311\`. Make sure **both** of these are at the top of the **path**; the order doesn't really matter. **
+**Important ‼️**
+
+If you ***already have python*** installed, check your **system enviormrent variables** by typing `Edit the system enviroment variables` in the search bar and clicking on `Enviroment Settings` . Then double click on **path** (for the **user** that you are in) and make sure that `python 3.11` is in there. It should look something like this: `C:\Users\UserName\AppData\Local\Programs\Python\Python311\Scripts\` & `C:\Users\yiric\AppData\Local\Programs\Python\Python311\`. Make sure **both** of these are at the top of the **path**, the `Python311\Scripts\` folder should go above the main `Python311` folder in your **path**.
 
 ### 2.5 (Optional) Install CUDA for GPU Training
 
