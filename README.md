@@ -49,7 +49,7 @@ Before starting, ensure your system meets the following requirements:
     
 -   **Internet connection** (to download tools and dependencies)
     
--   **At least 8 GB RAM** (16 GB recommended for training)
+-   **At least 8 GB RAM** (16+ GB recommended for training) 
     
 -   **10 GB free disk space** (for the repository, libtorch, and checkpoints)    
 
