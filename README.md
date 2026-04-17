@@ -130,6 +130,8 @@ Output should be `Python 3.11.x`.
 
 **Note:** If you have multiple Python versions, ensure `python` points to 3.11. You can also use `py -3.11` but we assume `python` works.
 
+If you ***already have python*** installed, check your **system enviormrent variables** by typing `Edit the system enviroment variables` and clicking on `Enviroment Settings` and then double clicking on **path** (for the **user** that you are in) and make sure that `python 3.11` is in there. It should look something like this: `C:\Users\UserName\AppData\Local\Programs\Python\Python311\Scripts\` & `C:\Users\yiric\AppData\Local\Programs\Python\Python311\`. Make sure **both** of these are at the top of the **path**; the order doesn't really matter. 
+
 ### 2.5 (Optional) Install CUDA for GPU Training
 
 If you have an **NVIDIA GPU** (Compute Capability 3.5+), you can install CUDA to train much faster. Skip this section if you only have a CPU.
@@ -594,7 +596,7 @@ The skill rating will appear in the wandb logs.
     
 -   **My YouTube Channel:** [My Youtybe Channel](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
 
--   **DM me on discord for help:** `richardsworld`
+-   **DM me on discord for help:** `richardsworld` **Do not dm me unless you read the whole github word for word, like to the point of memorization. I can garuntee 95% of questions (which it is lmaoo) are already answered in the github. If you dm me about something clearly stated in the github, I'm instantly blocking you, unless it was vague in the github.**
     
 
 ### Final Advice
@@ -612,4 +614,4 @@ The skill rating will appear in the wandb logs.
 
 **Happy training! :D**
 
-# SUBSCRIBE TO MY YOUTUBE CHANNEL FOR MORE TUTORIALS: [Subscribe](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
+# SUBSCRIBE TO MY YOUTUBE CHANNEL FOR MORE TUTORIALS 🔥: [Subscribe](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
