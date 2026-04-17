@@ -1,6 +1,6 @@
 # GigaLearnCPP Setup Guide 
 
-# FOLLOW THIS GUIDE ALL THE WAY THROUGH! If you skipped a step/didn't read an instruction, and then you decide to ask me for help, I'm going to be very mad at you.
+# ⚠️ FOLLOW THIS GUIDE ALL THE WAY THROUGH! If you skipped a step/didn't read an instruction, and then you decide to ask me for help, I'm going to be very mad at you. ⚠️
 
 ## IMPORTANT
 **If you do not understand how gigalearn works, it is VERY IMPORTANT to watch this tutorial to get an idea of how gigalearn works and some basic machine learning concepts. I can give you all the guides in the universe, but if your monkey brain does not understand a single thing, bot making will be very hard: 
