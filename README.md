@@ -196,13 +196,13 @@ Place the `collision_meshes` folder here (copy or move it into `GigaLearnCPP-Lea
 To avoid conflicts with other Python projects, we create a virtual environment inside the repository.
 
 ```
-python -m venv venv
+python -m venv gigalearn_env
 ```
 
 Activate it:
 
 ```
-venv\Scripts\activate
+gigalearn_env\Scripts\activate
 ```
 
 Your prompt should now show `(venv)`. All subsequent Python commands will use this isolated environment.
