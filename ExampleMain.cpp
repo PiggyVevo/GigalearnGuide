@@ -13,7 +13,7 @@ Just replace this with your original examplemain.cpp file in your GigalearnCPP-L
 #include <RLGymCPP/StateSetters/RandomState.h>
 #include <RLGymCPP/StateSetters/CombinedState.h>
 #include <RLGymCPP/ActionParsers/DefaultAction.h>
-//include all of our directories for to compile the Gigalearnbot.exe
+//include all of our directories to compile the Gigalearnbot.exe
 using namespace GGL;
 using namespace RLGC;
 
