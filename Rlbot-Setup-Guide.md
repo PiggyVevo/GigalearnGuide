@@ -1,4 +1,4 @@
-# Porting Your Trained Bot to RLBot (GGLBot)
+# Porting Your Trained Bot to RLBot 
 
 Once you have a trained model (`.lt` files), you can let your bot play in actual Rocket League matches using the **RLBot** framework. The **GGLBot** repository provides a lightweight, inference‑only executable that loads your model and communicates with RLBot.
 
