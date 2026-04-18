@@ -132,7 +132,7 @@ Output should be `Python 3.11.x`.
 
 **Important ‼️**
 
-If you ***already have python*** installed, check your **system enviormrent variables** by typing `Edit the system enviroment variables` in the search bar and clicking on `Enviroment Settings` . Then double click on **path** (for the **user** that you are in) and make sure that `python 3.11` is in there. It should look something like this: `C:\Users\UserName\AppData\Local\Programs\Python\Python311\Scripts\` & `C:\Users\yiric\AppData\Local\Programs\Python\Python311\`. Make sure **both** of these are at the top of the **path**, the `Python311\Scripts\` folder should go above the main `Python311` folder in your **path**.
+If you ***already have python*** installed, check your **system environment variables** by typing `Edit the system environment variables` in the search bar and clicking on `Environment Settings` . Then double click on **path** (for the **user** that you are in) and make sure that `python 3.11` is in there. It should look something like this: `C:\Users\UserName\AppData\Local\Programs\Python\Python311\Scripts\` & `C:\Users\yiric\AppData\Local\Programs\Python\Python311\`. Make sure **both** of these are at the top of the **path**, the `Python311\Scripts\` folder should go above the main `Python311` folder in your **path**.
 
 ### 2.5 (Optional) Install CUDA for GPU Training
 
@@ -306,7 +306,7 @@ cmake .. -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DT
 **Common error:** If CMake cannot find Python, you may need to set `-DPython_EXECUTABLE=...` to your Python executable path (the one inside your virtual environment). Example: `-DPython_EXECUTABLE="C:\Users\YourUsername\RLBot\GigaLearnCPP-Leak\venv\Scripts\python.exe"`
 
 After running, you should see `-- Configuring done` and `-- Generating done`.
-**VERY IMPORTANT: If you ever add a new file to gigalearn, such as a state setter, YOU MUST reconfigure cmake again. If you are jsut making an edit to a file, you just have to rebuild it.**
+**VERY IMPORTANT: If you ever add a new file to gigalearn, such as a state setter, YOU MUST reconfigure cmake again. If you are just making an edit to a file, you just have to rebuild it.**
 
 ### Step 3: Build the executable
 
@@ -314,7 +314,7 @@ After running, you should see `-- Configuring done` and `-- Generating done`.
 cmake --build . --config Release --target GigaLearnBot
 ```
 
-This will compile all sources and produce `GigaLearnBot.exe` inside `build\Release\`. The build time can be 5–15 minutes depending on your CPU.
+This will compile all sources and produce `GigaLearnBot.exe` inside `build\RelWithDebInfo\`. The build time can be 3–10 minutes depending on your CPU.
 
 **Note:** If you see warnings about `C4251`, they are benign and can be ignored.
 
@@ -361,7 +361,7 @@ If you want to start training from scratch (discard previous checkpoints), eithe
 
 1.  Delete the `checkpoints` folder inside `build\RelWithDebInfo`, or
     
-2.  Change the `cfg.checkpointFolder` string in `ExampleMain.cpp` to a new name (e.g., `"my_new_run"`) and rebuild.
+2.  Change the `cfg.checkpointFolder` string in `ExampleMain.cpp` to a new name (e.g., `"GGLRUN2"`) and rebuild.
     
 
 ----------
