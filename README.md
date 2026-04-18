@@ -617,4 +617,4 @@ The skill rating will appear in the wandb logs.
 
 **Happy training! :D**
 
-# SUBSCRIBE TO MY YOUTUBE CHANNEL FOR MORE TUTORIALS 🔥: [Subscribe](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1)
+# [SUBSCRIBE](https://www.youtube.com/@RrichardsWorld?sub_confirmation=1) To My Youtube Channel For More Tutorials! 🔥
