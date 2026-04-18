@@ -33,14 +33,16 @@ EnvCreateResult EnvCreateFunc(int index) {
         { new ZeroSumReward(new VelocityPlayerToBallReward(), 1.0f, 0.0f), 5.0f},		
         { new ZeroSumReward(new StrongTouchReward(), 1.0f, 1.0f), 50.0f },
         // { new ZeroSumReward(new VelocityBallToGoalReward(), 1.0f), 75.0f },
-		    // { new ZeroSumReward(new PickupBoostReward(), 1.0f, 1.0f), 100.0f},
+		// { new ZeroSumReward(new PickupBoostReward(), 1.0f, 1.0f), 100.0f },
         // { new SaveBoostReward(), 1.0f },
         // { new ZeroSumReward(new BumpReward(), 1.0f), 400.0f },
+	    //Zerosum reward works like this: { new ZeroSumReward(new YourReward(), 1.0f(teamspirit value), 1.0f(zerosum value)) 100.0f }, IT IS A WRAPPER, NOT A REWARD!!!
         // { new ZeroSumReward(new DemoReward(), 1.0f), 400.0f },
         // { new WavedashReward(), 20.0f },
         { new GoalReward(), 500.0f }
-    };
-    // these rewards will get your bot to touch the ball pretty fast, the rewards I commented out are commented out FOR A REASON dont use the oommented out rewards at first
+    };   
+    // these rewards will get your bot to touch the ball pretty fast, the rewards I commented out are commented out FOR A REASON dont use the oommented out rewards when you just start training
+	.
     std::vector<TerminalCondition*> terminalConditions = {
         new NoTouchCondition(15),
         new GoalScoreCondition()
@@ -63,7 +65,7 @@ EnvCreateResult EnvCreateFunc(int index) {
     }; //state setters, kickoff and randomstate weights go tune them yourself
     CombinedState* combinedSetter = new CombinedState(weightedSetters);
 
-    // Padded observation builder for up to 3 players per team
+    // Padded observation builder for up to 3 players per team, if your just training 1v1, just use advanced obs and only train ones, just remove the state setter
     auto obsBuilder = new DefaultObsPadded(3);
     auto actionParser = new DefaultAction();
 
@@ -104,7 +106,7 @@ int main(int argc, char* argv[]) {
 
     LearnerConfig cfg = {};
     cfg.deviceType = LearnerDeviceType::CPU;
-    cfg.tickSkip = 8; //tick skip, chaging this will change gamma
+    cfg.tickSkip = 8; //tick skip, if you change this you should change gamma
     cfg.actionDelay = cfg.tickSkip - 1;
     cfg.numGames = 128; //adjust to how good your cpu is, mine is a i7-12700k and 192 games is optimal for me. The better your cpu is, the more games you should have.
 
@@ -125,9 +127,9 @@ int main(int argc, char* argv[]) {
     cfg.ppo.policy.activationType = ModelActivationType::LEAKY_RELU; 
     cfg.ppo.critic.activationType = ModelActivationType::LEAKY_RELU;
 
-    cfg.ppo.sharedHead.addLayerNorm = true; //dont touch
-    cfg.ppo.policy.addLayerNorm = true;
-    cfg.ppo.critic.addLayerNorm = true;
+    cfg.ppo.sharedHead.addLayerNorm = true; // if you decide not to use sharedhead(why would you not?) set this to false
+    cfg.ppo.policy.addLayerNorm = true; // dont touch
+    cfg.ppo.critic.addLayerNorm = true; // dont touch
 
     cfg.skillTracker.enabled = true; //quite useful for some, but I dont really look at graphs. Turn it off if you dont want to be like JeffA233 xD
     cfg.skillTracker.numArenas = 8;
@@ -136,7 +138,7 @@ int main(int argc, char* argv[]) {
     cfg.skillTracker.ratingInc = 5;
     cfg.skillTracker.initialRating = 0;
 
-    cfg.checkpointFolder = "GGLRUN"; //the name of your bots run
+    cfg.checkpointFolder = "GGLRUN"; //the name of your bots run, changing this will start a new run automatically
 
     bool renderMode = false;
     for (int i = 1; i < argc; ++i) {
@@ -160,7 +162,7 @@ int main(int argc, char* argv[]) {
     cfg.randomSeed = 123; // use -1 for random seed for viewing, this doesnt matter tho
 
     Learner* learner = new Learner(EnvCreateFunc, cfg, StepCallback);
-    learner->Start();
+    learner->Start(); // START LEARNING BOYYYSSS
 
     return EXIT_SUCCESS;
 }
