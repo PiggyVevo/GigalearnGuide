@@ -35,6 +35,7 @@ This guide will walk you through setting up **GigaLearnCPP** – a high‑perfor
 11. [Metrics and Skill Tracker](#metrics-and-skill-tracker)
 12. [Common Errors and Troubleshooting](#common-errors-and-troubleshooting)
 13. [Final Notes and Resources](#final-notes-and-resources)
+14. [Final Advice](#Final-Advice)
     
 
 ----------
