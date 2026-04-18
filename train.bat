@@ -1,11 +1,11 @@
 @echo off
 REM Activate enviroment
 echo Activating enviroment
-call "C:\Users\YourUsername\anaconda3\Scripts\activate.bat" "C:\Users\YourUsername\anaconda3"
-call conda activate gigalearn_env
+cd /d "C:\Users\YourUsername\OneDrive\Documents\RLBot\GigaLearnCPP-Leak"
+call "gigalearn_env\Scripts\activate.bat"
 
 REM Change to the build directory
-cd /d C:\Users\YourUsername\OneDrive\Documents\GigaLearnCPP-Leak\build
+cd build
 
 REM echo Configuring...
 cmake .. -G "Visual Studio 17 2022" -A x64 -DCMAKE_BUILD_TYPE=RelWithDebInfo -DTorch_DIR="C:/Users/yiric/OneDrive/Documents/GigaLearnCPP-Leak/GigaLearnCPP/libtorch/share/cmake/Torch"
