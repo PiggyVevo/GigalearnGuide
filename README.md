@@ -256,7 +256,7 @@ LibTorch is PyTorch’s C++ library. You must download the **CPU** or **CUDA** v
 5.  Copy that `libtorch` folder into:
     
 
-cmd```
+```
 GigaLearnCPP-Leak\GigaLearnCPP\libtorch
 ```
 
